@@ -24,25 +24,18 @@ function PriceInputPage(props) {
     }
 
     const submitInputs = {
-      user_id: null,
-      user_name: null,
       price: price.toString(),
-      payments_date: null,
-      is_done: true,
-      place_name: "카페서문",
-      user_photo: null,
+      store_id: 0
     };
 
-    navigate("/camera", { state: submitInputs });
-
-    // axios
-    //   .get(`${hostURL}/api/payments`)
-    //   .then(() => {
-    //     navigate("/camera", { state: submitInputs });
-    //   })
-    //   .catch((error) => {
-    //     console.log(error);
-    //   });
+    axios
+      .post(`${hostURL}/api/payments`, submitInputs)
+      .then((res) => {
+        navigate("/camera", { state: res.data });
+      })
+      .catch((error) => {
+        console.log(error);
+      });
   };
 
   return (
@@ -77,7 +70,7 @@ function PriceInputPage(props) {
       </table>
       <Button
         onClick={handleSubmit}
-        buttonLink="/camera"
+        buttonLink=""
         buttonColor="#FF5555"
         buttonText="확인"
       />

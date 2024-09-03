@@ -5,7 +5,6 @@ import Webcam from "react-webcam";
 import styles from "../../css/CameraPage.module.css";
 import axios from "axios";
 import hostURL from "../../hostURL";
-import MirrorImage from "../../components/MirrorImage";
 import Loading from "../../components/Loading";
 
 const CameraPage = () => {
@@ -19,36 +18,31 @@ const CameraPage = () => {
     const reader = new FileReader();
     reader.readAsDataURL(blob);
     reader.onloadend = () => {
-      MirrorImage(reader.result, (mirroredBlob) => {
-        const formData = new FormData();
-        formData.append("user_photo", mirroredBlob);
-        formData.append("price", output.price);
-        formData.append("user_name", output.user_name);
-        formData.append("payments_date", output.payments_date);
-        formData.append("is_done", output.is_done);
-        formData.append("place_name", output.place_name);
-        formData.append("user_id", output.user_id);
+      const formData = new FormData();
+      formData.append("user_face_img", blob);
 
-        // submit payment data
-        axios
-          .post(`${hostURL}/api/payments`, formData)
-          .then(() => {
-            navigate("/paymentsuccess");
-            setIsLoading(false);
-          })
-          .catch((error) => {
-            console.log(error);
-            setIsLoading(false);
-          });
-      });
+      // submit payment data
+      axios
+        .post(
+          `${hostURL}/api/payments/${output.payments_id}/face_payment`,
+          formData
+        )
+        .then(() => {
+          navigate("/paymentsuccess");
+          setIsLoading(false);
+        })
+        .catch((error) => {
+          console.log(error);
+          setIsLoading(false);
+        });
     };
   };
 
-  // useEffect(() => {
-  //   if (output === null) {
-  //     navigate("/priceinput");
-  //   }
-  // });
+  useEffect(() => {
+    if (output === null) {
+      navigate("/priceinput");
+    }
+  });
 
   return (
     <div>
@@ -57,7 +51,10 @@ const CameraPage = () => {
         <Loading />
       ) : (
         <div className={styles.webcamBox}>
-          <Webcam mirrored={true} className={styles.webcam} screenshotQuality={1}>
+          <Webcam
+            className={styles.webcam}
+            screenshotQuality={1}
+          >
             {({ getScreenshot }) => (
               <div className={styles.buttonBox}>
                 <button
