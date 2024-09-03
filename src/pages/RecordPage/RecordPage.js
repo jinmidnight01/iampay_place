@@ -17,7 +17,6 @@ const RecordPage = () => {
     axios
       .get(`${hostURL}/api/payments`)
       .then((response) => {
-        console.log(response.data.payments);
         setPaymentsData(response.data.payments);
       })
       .catch((error) => {
@@ -135,16 +134,6 @@ const RecordPage = () => {
               className={styles.select}
             />
           </div>
-
-          {/* <div className={styles.selectContent}>
-            <Select
-              isMulti
-              options={nameOptions}
-              onChange={handleNameChange}
-              placeholder="이름을 선택해주세요"
-              className={styles.select}
-            />
-          </div> */}
         </div>
       </div>
 
@@ -166,10 +155,6 @@ const RecordPage = () => {
       <div className={styles.recordBox}>
         <div className={styles.recordHeader}>
           <div className={styles.recordBlock}>주문일자</div>
-          {/* <div className={styles.recordBlock} id={styles.recordMiddleBlock}>
-            이름
-            번호(4자리)
-          </div> */}
           <div className={styles.recordBlock}>금액</div>
         </div>
         <hr />
@@ -193,10 +178,6 @@ const RecordPage = () => {
                 <span>{payment.payments_date.substr(8, 2)}</span>&nbsp;
                 <span>{payment.payments_date.substr(11, 5)}</span>
               </div>
-              {/* <div className={styles.recordBlock} id={styles.recordMiddleBlock}>
-                {payment.user_name.substr(0, 1)}X
-                {payment.user_name.substr(2, 1)}
-              </div> */}
               <div className={styles.recordBlock}>
                 {Number(payment.price).toLocaleString()}원
               </div>
