@@ -59,6 +59,7 @@ const CameraPage = () => {
               <div className={styles.buttonBox}>
                 <button
                   onClick={() => {
+                    setIsLoading(true);
                     const image_Src = getScreenshot();
                     paymentSubmit(image_Src);
                   }}
