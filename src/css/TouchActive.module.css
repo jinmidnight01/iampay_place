@@ -1,0 +1,28 @@
+td {
+  width: 170px;
+  height: 65px;
+  text-align: center;
+  font-size: 35px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.active {
+  background-color: #f0f0f0;
+}
+
+.leftVector {
+  width: 40px;
+}
+
+@media all and (max-width: 600px) {
+  td {
+    width: 120px;
+    height: 55px;
+    font-size: 30px;
+  }
+
+  .leftVector {
+    width: 30px;
+  }
+}

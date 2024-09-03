@@ -1,0 +1,56 @@
+.priceInputGuide {
+  text-align: center;
+  font-size: 25px;
+  margin-top: 60px;
+}
+
+.priceInput {
+  margin: 28px auto 0 auto;
+  border-bottom: 1px solid black;
+  width: 380px;
+  display: flex;
+  padding-bottom: 7px;
+}
+
+.changedInput {
+  text-align: center;
+  flex-grow: 1;
+  font-weight: bold;
+  font-size: 35px;
+  padding-left: 45px;
+}
+
+.fixedInput {
+  font-size: 35px;
+  padding-right: 10px;
+}
+
+table {
+  margin: 10px auto 5px auto;
+}
+
+@media all and (max-width: 600px) {
+  .priceInputGuide {
+    font-size: 20px;
+    margin-top: 50px;
+  }
+
+  .priceInput {
+    margin: 35px auto 0 auto;
+    width: 280px;
+  }
+
+  .changedInput {
+    font-size: 30px;
+    padding-left: 30px;
+  }
+
+  .fixedInput {
+    font-size: 30px;
+    padding-right: 5px;
+  }
+
+  table {
+    margin: 20px auto 13px auto;
+  }
+}

@@ -1,0 +1,122 @@
+.upperBox {
+  display: flex;
+  justify-content: space-between;
+  width: 75%;
+  margin: 5px auto;
+}
+
+.totalPrice {
+  font-size: 25px;
+  font-weight: 500;
+  width: 220px;
+}
+
+.selectBox {
+  flex-grow: 1;
+}
+
+.select {
+  line-height: 25px;
+  margin-bottom: 10px;
+}
+
+.recordBox {
+  width: 75%;
+  margin: 5px auto 5px auto;
+}
+
+.recordBox hr {
+  flex-grow: 1;
+  border: 0.1px solid #000000;
+  margin: auto 0;
+}
+
+.recordHeader {
+  display: flex;
+  margin: 10px 0;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.recordBlock {
+  width: 50%;
+  text-align: center;
+}
+
+.recordBody {
+  overflow: auto;
+  min-height: 150px;
+  max-height: 300px;
+}
+
+.recordRow {
+  display: flex;
+  margin: 13px 0;
+  font-size: 20px;
+}
+
+.recordRow:active {
+  background-color: #ffe6e6;
+  border-radius: 5px;
+}
+
+#recordMiddleBlock {
+  margin-left: 80px;
+  margin-right: 80px;
+}
+
+@media all and (max-width: 600px) {
+  .upperBox {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    margin: 0px auto;
+  }
+
+  .totalPrice {
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 10px;
+  }
+
+  .select {
+    line-height: 15px;
+    margin-bottom:10px;
+  }
+
+  .recordBox {
+    width: 300px;
+    margin: 0px auto 10px auto;
+  }
+
+  .modalBox {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    margin: 0 auto;
+  }
+
+  .recordHeader {
+    display: flex;
+    margin: 10px 0;
+    font-size: 16px;
+    font-weight: bold;
+  }
+  
+  .recordBody {
+    overflow: auto;
+    min-height: 150px;
+    max-height: 200px;
+  }
+  
+  .recordRow {
+    display: flex;
+    margin: 10px 0;
+    font-size: 16px;
+  }
+  
+  #recordMiddleBlock {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+}

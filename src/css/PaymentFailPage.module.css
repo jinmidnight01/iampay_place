@@ -1,0 +1,35 @@
+.imgBox {
+  display: flex;
+  justify-content: center;
+  margin-top: 120px;
+} 
+
+.alertSign {
+  width: 130px;
+}
+
+.failText {
+  font-size: 30px;
+  font-weight: 500;
+  margin-top: 35px;
+  margin-bottom: 50px;
+  text-align: center;
+  line-height: 45px;
+}
+
+@media all and (max-width: 600px) {
+  .imgBox {
+    margin-top: 120px;
+  }
+
+  .alertSign {
+    width: 120px;
+  }
+
+  .failText {
+    font-size: 25px;
+    margin-top: 35px;
+    margin-bottom: 45px;
+    line-height: 30px;
+  }
+}

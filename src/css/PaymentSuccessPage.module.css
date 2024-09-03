@@ -1,0 +1,34 @@
+.imgBox {
+  display: flex;
+  justify-content: center;
+  margin-top: 120px;
+}
+
+.checkSign {
+  width: 130px;
+}
+
+.successText {
+  font-size: 30px;
+  font-weight: 500;
+  margin-top: 35px;
+  text-align: center;
+  line-height: 55px;
+}
+
+@media all and (max-width: 600px) {
+  .imgBox {
+    margin-top: 120px;
+  }
+
+  .checkSign {
+    width: 120px;
+  }
+
+  .successText {
+    font-size: 25px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    line-height: 43px;
+  }
+}

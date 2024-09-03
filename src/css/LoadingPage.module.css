@@ -1,0 +1,32 @@
+.loadingBox {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 140px;
+  margin-bottom: 50px;
+}
+
+.loadingBox img {
+  width: 180px;
+}
+
+.loadingText {
+  font-size: 35px;
+  font-weight: 500;
+  margin-top: 5px;
+}
+
+@media all and (max-width: 600px) {
+  .loadingBox {
+    margin-top: 150px;
+  }
+
+  .loadingBox img {
+    width: 120px;
+  }
+
+  .loadingText {
+    font-size: 30px;
+  }
+}

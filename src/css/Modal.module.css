@@ -1,0 +1,102 @@
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal {
+  background: white;
+  padding: 15px;
+  border-radius: 10px;
+  width: 350px;
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+  z-index: 1001;
+}
+
+.header h2 {
+  text-align: center;
+}
+
+.contentBox {
+  line-height: 35px;
+  font-size: 20px;
+  margin-left: 20px;
+}
+
+.content {
+  font-weight: bold;
+}
+
+.buttonLink {
+  text-decoration: none;
+  cursor: default;
+}
+
+.cancelButtonBox {
+  display: flex;
+  justify-content: center;
+  margin-top: 25px;
+  margin-bottom: 20px;
+}
+
+.buttonYes {
+  width: 130px;
+  height: 45px;
+  border: none;
+  border-radius: 10px;
+  color: #ffffff;
+  font-size: 20px;
+  font-weight: bold;
+  margin-right: 40px;
+  cursor: pointer;
+  background-color: #FF5555;
+}
+
+.buttonYes:active {
+  opacity: 0.8;
+}
+
+.buttonNo {
+  width: 130px;
+  height: 45px;
+  border: none;
+  border-radius: 10px;
+  color: #ffffff;
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  background-color: grey;
+}
+
+.buttonNo:active {
+  opacity: 0.8;
+}
+
+
+@media all and (max-width: 600px) {
+  .modal {
+    width: 280px;
+    margin-bottom: 100px;
+    padding: 20px;
+  };
+
+  .buttonYes {
+    width: 130px;
+    height: 35px;
+    border: none;
+    border-radius: 10px;
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: bold;
+    margin-right: 20px;
+    cursor: pointer;
+    background-color: #FF5555;
+  }
+}
+

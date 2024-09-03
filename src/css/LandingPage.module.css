@@ -1,0 +1,27 @@
+.logoBox {
+  display: flex;
+  justify-content: center;
+  margin-top: 80px;
+}
+
+.seomoonLogo {
+  width: 150px;
+  border-radius: 100%;
+}
+
+.buttonBoxes {
+  margin: 40px auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+@media all and (max-width: 600px) {
+  .seomoonLogo {
+    width: 150px;
+  }
+
+  .buttonBoxes {
+    margin: 65px auto;
+  }
+}
