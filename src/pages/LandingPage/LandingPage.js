@@ -1,6 +1,6 @@
 import React from 'react';
 import Header from "../../components/Header";
-import seomoonLogo from "../../images/seomoonLogo.jpg";
+import iampayLogo from "../../images/iampayLogo.png";
 import styles from "../../css/LandingPage.module.css";
 import Button from "../../components/Button";
 
@@ -9,7 +9,7 @@ function LandingPage() {
     <div>
       <Header />
       <div className={styles.logoBox}>
-        <img className={styles.seomoonLogo} src={seomoonLogo} alt="SeoMoon" />
+        <img className={styles.Logo} src={iampayLogo} alt="Logo" />
       </div>
       <div className={styles.buttonBoxes}>
         <Button buttonLink="/priceinput" buttonColor="#FF5555" buttonText="결제하기" />
