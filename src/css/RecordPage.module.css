@@ -5,9 +5,10 @@
   margin: 5px auto;
 }
 
-.totalPrice {
-  font-size: 25px;
+.priceTitle {
+  font-size: 23px;
   font-weight: 500;
+  line-height: 35px;
   width: 220px;
 }
 

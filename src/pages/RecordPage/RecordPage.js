@@ -111,9 +111,15 @@ const RecordPage = () => {
       <Header />
 
       <div className={styles.upperBox}>
-        <div className={styles.totalPrice}>
+        <div>
+        <div className={styles.priceTitle}>
+          선입금: <span>300,000</span>원
+        </div>
+        <div className={styles.priceTitle}>
           매출: <span>{totalPrice.toLocaleString()}</span>원
         </div>
+        </div>
+
         <div className={styles.selectBox}>
           <div className={styles.selectContent}>
             <Select

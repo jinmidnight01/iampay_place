@@ -25,7 +25,7 @@ function PriceInputPage(props) {
 
     const submitInputs = {
       price: price.toString(),
-      store_id: 0
+      store_id: 1
     };
 
     axios
