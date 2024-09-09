@@ -88,6 +88,18 @@ const RecordPage = () => {
     axios
       .delete(`${hostURL}/api/payments/${payments_id}`)
       .then((response) => {
+        if (user_id === null) {
+          axios
+            .get(`${hostURL}/api/payments`)
+            .then((response) => {
+              setPaymentsData(response.data.payments);
+            })
+            .catch((error) => {
+              console.error(error);
+            });
+          return;
+        }
+
         axios
           .patch(`${hostURL}/api/users/${user_id}/spend?price=-${price}`)
           .then((response) => {
